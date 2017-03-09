@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Menubar</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="Company_Name1">Johnson &amp; Johnson pvt. ltd.</string>
+
+    <string name="designation1">Internship in Maintenance</string>
+
+    <string name="w11">•	Planned and monitored various maintenance services like Corrective Maintenance, Preventive Maintenance, and Emergency Maintenance."
+</string>
+    <string name="w12">•	Attended Daily Meetings provided by Maintenance Department on Improvement and Breakdowns of Machine.
+</string>
+    <string name="w13">•	Monitored Breakdowns/Issues and maintained a record of all previous and current breakdowns or issues of Machines.
+</string>
+
+    <string name="Company_Name2">Johnson &amp; Johnson pvt. ltd.</string>
+
+    <string name="designation2">Internship in Maintenance</string>
+
+    <string name="w21">•	Planned and monitored various maintenance services like Corrective Maintenance, Preventive Maintenance, and Emergency Maintenance."
+</string>
+    <string name="w22">•	Attended Daily Meetings provided by Maintenance Department on Improvement and Breakdowns of Machine.
+</string>
+    <string name="w23">•	Monitored Breakdowns/Issues and maintained a record of all previous and current breakdowns or issues of Machines.
+</string>
+
+    <string name="p1">The Mini project deals with the case study about Coal Pulverisers, which the ones used coal for combustion in the steam-generating furnaces of fossil.
+        By using different types of pulveriser machines to smash materials into tiny shards or granules e.g. Hammer mills, ring mills, etc.</string>
+
+    <string name="p1_title">Coal Pulveriser</string>
+    <string name="p2_title">CNC Machining</string>
+
+    <string name="p2">The Major project deals with the manufacturing of various Engineering components on conventional machines involves machine accuracy and operator skill,
+        which are used in the CNC lathe machine. The machine covers all operations in the components.</string>
+</resources>

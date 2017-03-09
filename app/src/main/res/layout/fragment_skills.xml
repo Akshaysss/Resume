@@ -1,0 +1,45 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragmnt_skills"
+    android:background="@color/cardview_dark_background"
+    tools:context="com.example.akshayjindam.menubar.fragments.Skills">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <!--
+    <GridView
+
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        >
+
+<GridView
+        android:id="@+id/gridView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:numColumns="3">
+
+    </GridView>
+        -->
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/my_recycler_view"
+       >
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+    <!-- </GridView>  -->
+
+
+
+
+</RelativeLayout>
