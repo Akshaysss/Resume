@@ -43,7 +43,6 @@ public class vp_Adapter extends PagerAdapter {
         return layout;
     }
 
-
     @Override
     public int getCount() {
         return data.size();
