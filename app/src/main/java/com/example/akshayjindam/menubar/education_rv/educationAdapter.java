@@ -1,4 +1,4 @@
-package com.example.akshayjindam.menubar.recyclerView2;
+package com.example.akshayjindam.menubar.education_rv;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -27,15 +27,15 @@ public class educationAdapter extends RecyclerView.Adapter<educationAdapter.MyVi
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView Name;
-        TextView cls;
+        TextView CollegeName;
+        TextView CourseName;
         TextView year;
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            Name = (TextView) itemView.findViewById(R.id.name2);
-            cls = (TextView) itemView.findViewById(R.id.cls);
-            year = (TextView) itemView.findViewById(R.id.year);
+            CollegeName = (TextView) itemView.findViewById(R.id.er_college_name);
+            CourseName = (TextView) itemView.findViewById(R.id.er_course);
+            year = (TextView) itemView.findViewById(R.id.er_year);
         }
     }
 
@@ -48,11 +48,11 @@ public class educationAdapter extends RecyclerView.Adapter<educationAdapter.MyVi
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.Name.setText(list.get(position).getName());
-        holder.cls.setText(list.get(position).getCls());
+        holder.CollegeName.setText(list.get(position).getCollegeName());
+        holder.CourseName.setText(list.get(position).getCourseName());
         holder.year.setText(list.get(position).getYear()+"");
 
-        holder.Name.setOnClickListener(new View.OnClickListener() {
+        holder.CollegeName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

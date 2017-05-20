@@ -1,4 +1,4 @@
-package com.example.akshayjindam.menubar.recyclerView;
+package com.example.akshayjindam.menubar.skills_rv;
 
 /**
  * Created by Akshay Jindam on 28-02-2017.

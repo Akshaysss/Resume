@@ -9,7 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.akshayjindam.menubar.R;
+import com.example.akshayjindam.menubar.ViewPager.project_tab1;
+import com.example.akshayjindam.menubar.ViewPager.project_tab2;
 import com.example.akshayjindam.menubar.viewPager_Adapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Project extends Fragment {
@@ -34,7 +39,8 @@ public class Project extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_project, container, false);
 
-        ViewPager pager=(ViewPager) v.findViewById(R.id.pager);
+        ViewPager pager = (ViewPager) v.findViewById(R.id.pager);
+
 
         pager.setAdapter(buildAdapter());
 
@@ -42,7 +48,13 @@ public class Project extends Fragment {
     }
 
     private PagerAdapter buildAdapter() {
-        return(new viewPager_Adapter(getActivity(), getChildFragmentManager()));
+
+        List<Fragment> fragmentsList = new ArrayList<>();
+        fragmentsList.add(new project_tab1());
+        fragmentsList.add(new project_tab2());
+        fragmentsList.add(new project_tab1());
+
+        return (new viewPager_Adapter(getActivity(), getChildFragmentManager(), fragmentsList));
     }
 
 }

@@ -2,20 +2,25 @@ package com.example.akshayjindam.menubar.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.akshayjindam.menubar.R;
+import com.example.akshayjindam.menubar.experience_rv.experienceAdapter;
+import com.example.akshayjindam.menubar.experience_rv.experienceModel;
+
+import java.util.ArrayList;
 
 
-public class Experience extends Fragment implements View.OnClickListener {
+public class Experience extends Fragment {
 
-    TextView txt1, txt2, txt3, txt4;
-    LinearLayout layout1, layout2, layout3;
+    TextView txt4;
+    LinearLayout layout1, layout2, layout3, layout4;
 
     public Experience() {
     }
@@ -27,85 +32,48 @@ public class Experience extends Fragment implements View.OnClickListener {
 
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_experience, container, false);
 
+        RecyclerView mexperience = (RecyclerView) v.findViewById(R.id.ex_recycler_view);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        mexperience.setLayoutManager(layoutManager);
 
-        txt1 = (TextView) v.findViewById(R.id.more1);
-        txt2 = (TextView) v.findViewById(R.id.more2);
-        txt3 = (TextView) v.findViewById(R.id.more3);
+        mexperience.setHasFixedSize(true);
 
-        layout1 = (LinearLayout) v.findViewById(R.id.jj_layout1);
-        layout2 = (LinearLayout) v.findViewById(R.id.jj_layout2);
-        layout3 = (LinearLayout) v.findViewById(R.id.jj_layout3);
 
-        txt1.setOnClickListener(this);
-        txt2.setOnClickListener(this);
-        txt3.setOnClickListener(this);
+        ArrayList<experienceModel> list= new ArrayList<>();
+
+        experienceModel e1=new experienceModel();
+        e1.setCompanyName("Johnson & Johnson");
+        e1.setDesignation("Maintenance Engineer");
+        e1.setPeriod(7);
+        e1.setContent1("@string/w11");
+        e1.setContent2("@string/w12");
+        e1.setContent3("@string/w13");
+        e1.setPhotoID1(R.drawable.ic_experience);
+        list.add(e1);
+
+        experienceModel e2=new experienceModel();
+        e2.setCompanyName("Johnson & Johnson");
+        e2.setDesignation("Maintenance Engineer");
+        e2.setPeriod(7);
+        e2.setContent1("@string/w21");
+        e2.setContent2("@string/w22");
+        e2.setContent3("@string/w23");
+        e2.setPhotoID1(R.drawable.ic_experience);
+        list.add(e2);
+
+        experienceAdapter mAdapter = new experienceAdapter(list, getContext());
+        mexperience.setAdapter(mAdapter);
 
 
         return v;
     }
-
-
-    @Override
-    public void onClick(View v) {
-
-        switch(v.getId()){
-            case R.id.more1:
-
-                if (layout1.getVisibility() == View.VISIBLE) {
-                    layout1.setVisibility(View.GONE);
-                    txt1.setText("...more");
-                    Toast.makeText(getActivity(), "show less", Toast.LENGTH_SHORT).show();
-
-                } else {
-                    layout1.setVisibility(View.VISIBLE);
-                    txt1.setText("...less");
-
-                    Toast.makeText(getContext(), "show more", Toast.LENGTH_SHORT).show();
-                }
-                //whatever
-                break;
-
-            case R.id.more2:
-
-                if(layout2.getVisibility()== View.VISIBLE){
-                    layout2.setVisibility(View.GONE);
-                    txt2.setText("...more");
-                    Toast.makeText(getContext(),"show less",Toast.LENGTH_SHORT).show();
-                } else {
-                    layout2.setVisibility(View.VISIBLE);
-                    txt2.setText("...less");
-                }
-
-
-                break;
-
-            case R.id.more3:
-
-                if (layout3.getVisibility() == View.VISIBLE) {
-                    layout3.setVisibility(View.GONE);
-                    txt3.setText("...more");
-                    Toast.makeText(getActivity(), "show less", Toast.LENGTH_SHORT).show();
-
-                } else {
-                    layout3.setVisibility(View.VISIBLE);
-                    txt3.setText("...less");
-                    Toast.makeText(getContext(), "show more", Toast.LENGTH_SHORT).show();
-
-                }
-
-
-        }
-
-
-
-
-    }
 }
+
+
 

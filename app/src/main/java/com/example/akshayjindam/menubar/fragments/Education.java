@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.akshayjindam.menubar.R;
-import com.example.akshayjindam.menubar.recyclerView2.educationAdapter;
-import com.example.akshayjindam.menubar.recyclerView2.educationModel;
+import com.example.akshayjindam.menubar.education_rv.educationAdapter;
+import com.example.akshayjindam.menubar.education_rv.educationModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,8 +39,7 @@ public class Education extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_education, container, false);
 
-        RecyclerView meducatoin = (RecyclerView) v.findViewById(R.id.rv_education);
-
+        RecyclerView meducatoin = (RecyclerView) v.findViewById(R.id.edu_recyclerView);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
         meducatoin.setLayoutManager(layoutManager);
 
@@ -49,20 +48,20 @@ public class Education extends Fragment {
         List<educationModel> list = new ArrayList<>();
 
         educationModel A1 = new educationModel();
-        A1.setName("AIET");
-        A1.setCls("Mechanical Engineering");
+        A1.setCollegeName("AIET");
+        A1.setCourseName("(Mechanical Engineering)");
         A1.setYear(2015);
         list.add(A1);
 
         educationModel A2 = new educationModel();
-        A2.setName("BNN");
-        A2.setCls("SCIENCE");
+        A2.setCollegeName("BNN");
+        A2.setCourseName("(SCIENCE)");
         A2.setYear(2011);
         list.add(A2);
 
         educationModel A3 = new educationModel();
-        A3.setName("S.J.P");
-        A3.setCls("English");
+        A3.setCollegeName("S.J.P");
+        A3.setCourseName("(English)");
         A3.setYear(2009);
         list.add(A3);
 

@@ -1,4 +1,4 @@
-package com.example.akshayjindam.menubar.recyclerView;
+package com.example.akshayjindam.menubar.skills_rv;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -16,12 +16,12 @@ import java.util.List;
  * Created by Akshay Jindam on 28-02-2017.
  */
 
-public class GridViewAdapter extends RecyclerView.Adapter<GridViewAdapter.ViewHolder> {
+public class Skills_Adapter extends RecyclerView.Adapter<Skills_Adapter.ViewHolder> {
     private Context context;
     private List<skillsModel> list;
 
 
-    public GridViewAdapter(List<skillsModel> list, Context context) {
+    public Skills_Adapter(List<skillsModel> list, Context context) {
 
         this.list = list;
         this.context = context;
@@ -40,14 +40,14 @@ public class GridViewAdapter extends RecyclerView.Adapter<GridViewAdapter.ViewHo
     }
 
     @Override
-    public GridViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int i) {
+    public Skills_Adapter.ViewHolder onCreateViewHolder(ViewGroup parent, int i) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.skills_row, parent, false);
 
         return new ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(GridViewAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(Skills_Adapter.ViewHolder holder, int position) {
             holder.Name.setText(list.get(position).getName());
 
         // for image

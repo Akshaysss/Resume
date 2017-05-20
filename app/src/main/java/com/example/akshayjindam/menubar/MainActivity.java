@@ -1,9 +1,7 @@
 package com.example.akshayjindam.menubar;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
@@ -13,16 +11,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
+import com.example.akshayjindam.menubar.fragments.About;
 import com.example.akshayjindam.menubar.fragments.Education;
 import com.example.akshayjindam.menubar.fragments.Experience;
 import com.example.akshayjindam.menubar.fragments.Project;
+import com.example.akshayjindam.menubar.fragments.Project1;
 import com.example.akshayjindam.menubar.fragments.Skills;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
+    public interface OnBackPressedListener {
+        void onBackPressed();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +41,14 @@ public class MainActivity extends AppCompatActivity
     public void defaultItems() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -66,6 +69,18 @@ public class MainActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
+
+        /*
+        List<Fragment> fragmentList = getSupportFragmentManager().getFragments();
+        if (fragmentList != null) {
+            //TODO: Perform your logic to pass back press here
+            for(Fragment fragment : fragmentList){
+                if(fragment instanceof OnBackPressedListener){
+                    ((OnBackPressedListener)fragment).onBackPressed();
+                }
+            }
+        }*/
+
     }
 
     @Override
@@ -103,18 +118,18 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_skills) {
             switchFragment(new Skills());
 
-
         } else if (id == R.id.nav_education) {
             switchFragment(new Education());
-
-
         } else if (id == R.id.nav_project) {
             switchFragment(new Project());
-
-
+        } else if (id == R.id.nav_project1) {
+            switchFragment(new Project1());
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
+
+        } else if (id == R.id.nav_about) {
+            switchFragment (new About());
 
         }
 
@@ -123,11 +138,10 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-
     public void switchFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, fragment)
+                .replace(R.id.content_main, fragment)
                 .commit();
     }
 
