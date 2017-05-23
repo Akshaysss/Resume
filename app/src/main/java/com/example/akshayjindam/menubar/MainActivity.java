@@ -15,7 +15,6 @@ import android.view.MenuItem;
 import com.example.akshayjindam.menubar.fragments.About;
 import com.example.akshayjindam.menubar.fragments.Education;
 import com.example.akshayjindam.menubar.fragments.Experience;
-import com.example.akshayjindam.menubar.fragments.Project;
 import com.example.akshayjindam.menubar.fragments.Project1;
 import com.example.akshayjindam.menubar.fragments.Skills;
 
@@ -31,7 +30,6 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         defaultItems();
 
@@ -80,7 +78,6 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         }*/
-
     }
 
     @Override
@@ -92,6 +89,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
+
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
@@ -114,19 +113,16 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_experience) {
             switchFragment(new Experience());
 
-
         } else if (id == R.id.nav_skills) {
             switchFragment(new Skills());
 
         } else if (id == R.id.nav_education) {
             switchFragment(new Education());
-        } else if (id == R.id.nav_project) {
-            switchFragment(new Project());
+
         } else if (id == R.id.nav_project1) {
             switchFragment(new Project1());
-        } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_about) {
             switchFragment (new About());

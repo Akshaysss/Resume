@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.akshayjindam.menubar.MainActivity;
 import com.example.akshayjindam.menubar.R;
 import com.example.akshayjindam.menubar.education_rv.educationAdapter;
 import com.example.akshayjindam.menubar.education_rv.educationModel;
@@ -38,6 +39,7 @@ public class Education extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_education, container, false);
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle("Education");
 
         RecyclerView meducatoin = (RecyclerView) v.findViewById(R.id.edu_recyclerView);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());

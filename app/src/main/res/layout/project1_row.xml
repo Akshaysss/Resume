@@ -40,7 +40,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="0.9"
                         android:gravity="center"
-                        android:text="@string/p1_title"
+                        android:text="Topic"
                         android:textColor="#FFF"
                         android:textSize="20sp"
                         android:textStyle="bold" />

@@ -6,17 +6,17 @@ package com.example.akshayjindam.menubar.skills_rv;
 
 public class skillsModel {
 
-    private  String Name;
+    private String Name;
     public int photoID;
+    public float rating;
 
+    public skillsModel() {
+    }
 
-    public skillsModel(){
-        String Name = null;
-        int photoID = 0;
-
-
-        this.Name=Name;
-        this.photoID=photoID;
+    public skillsModel(String name, int photoID, float rating) {
+        Name = name;
+        this.photoID = photoID;
+        this.rating = rating;
     }
 
     public String getName() {
@@ -33,5 +33,13 @@ public class skillsModel {
 
     public void setPhotoID(int photoID) {
         this.photoID = photoID;
+    }
+
+    public float getRating() {
+        return rating;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
     }
 }

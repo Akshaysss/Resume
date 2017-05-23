@@ -7,7 +7,7 @@ package com.example.akshayjindam.menubar.experience_rv;
 public class experienceModel {
 
     private String CompanyName, Designation, Content1, Content2,Content3;
-    private int Period;
+    private float Period;
     private int photoID1;
 
 
@@ -17,7 +17,7 @@ public class experienceModel {
         String Content1 = null;
         String Content2 = null;
         String Content3 = null;
-        int Period = 0;
+        float Period = 0;
         int photoID1 = 0;
 
         this.CompanyName = CompanyName;
@@ -45,11 +45,11 @@ public class experienceModel {
         Designation = designation;
     }
 
-    public int getPeriod() {
+    public float getPeriod() {
         return Period;
     }
 
-    public void setPeriod(int period) {
+    public void setPeriod(float period) {
         Period = period;
     }
 

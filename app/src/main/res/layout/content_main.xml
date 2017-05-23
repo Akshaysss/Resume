@@ -11,4 +11,10 @@
     tools:showIn="@layout/app_bar_main">
 
 
+    <include
+        layout="@layout/fragment_main_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
 </RelativeLayout>

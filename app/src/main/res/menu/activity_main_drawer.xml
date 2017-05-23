@@ -15,13 +15,9 @@
             android:icon="@drawable/ic_education"
             android:title="Education" />
         <item
-            android:id="@+id/nav_project"
-            android:icon="@drawable/ic_project"
-            android:title="Project" />
-        <item
             android:id="@+id/nav_project1"
             android:icon="@drawable/ic_project"
-            android:title="Project1" />
+            android:title="Project" />
 
     </group>
 
@@ -31,10 +27,12 @@
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Share" />
+<!--
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Send" />
+-->
             <item
                 android:id="@+id/nav_about"
                 android:icon="@drawable/ic_menu_send"
